@@ -21,11 +21,10 @@ import './Home.css';
 const HomePage: React.FC = () => {
   let [showSkip, setSkip] = React.useState(true);
 
-  const ionSlideChanged = (event: CustomEvent) => {
-    const target: any = event.target;
-    setSkip(!target.swiper.isEnd);
+  async function ionSlideChanged(event: CustomEvent) {
+    const target = event.target as HTMLIonSlidesElement;
+    setSkip(! await target.isEnd());
   }
-
 
   return (
     <IonPage>
