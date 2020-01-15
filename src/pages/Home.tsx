@@ -26,13 +26,6 @@ const HomePage: React.FC = () => {
     setSkip(!target.swiper.isEnd);
   }
 
-  const skipButton = () => {
-    if (showSkip) {
-      return (<IonButton routerDirection="forward" routerLink="/game" color="light">Skip</IonButton>);
-    } else {
-      return (<span></span>);
-    }
-  }
 
   return (
     <IonPage>
@@ -43,7 +36,10 @@ const HomePage: React.FC = () => {
           </IonButtons>
           <IonTitle>Home</IonTitle>
           <IonButtons slot="end">
-            {skipButton()}
+            {showSkip && <IonButton
+              routerDirection="forward"
+              routerLink="/game"
+              color="light">Skip </IonButton>}
           </IonButtons>
         </IonToolbar>
       </IonHeader>
