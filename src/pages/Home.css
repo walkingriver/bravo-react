@@ -1,4 +1,20 @@
-.welcome-card img {
-  max-height: 35vh;
-  overflow: hidden;
+
+ion-content {
+  --ion-background-color: transparent;
+  background-image: url('/assets/images/choir.jpg');
+  background-size: cover !important;
+  background-position: center;
 }
+
+ion-card-content, ion-card-header {
+  text-align: left;
+  /* background-color: #ffffff ; */
+  --background: #ffffff;
+}
+
+/* ion-card {
+  text-align: left;
+  background-color: #ffffff ;
+  --background: #ffffff;
+  --ion-background-color: #ffffff;
+} */

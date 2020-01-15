@@ -17,6 +17,7 @@ import {
 } from '@ionic/react';
 import React from 'react';
 import './Home.css';
+import '../theme/app.css';
 
 const HomePage: React.FC = () => {
   let [showSkip, setSkip] = React.useState(true);

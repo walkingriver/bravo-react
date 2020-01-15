@@ -1,0 +1,28 @@
+.bg {
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20vh;
+  width: 100%;
+}
+
+
+.movie {
+  background-image: url('/assets/images/movie.jpg');
+}
+
+.song {
+  background-image: url('/assets/images/music.jpg');
+}
+
+.book {
+  background-image: url('/assets/images/book.jpg');
+}
+
+.concert {
+  background-image: url('/assets/images/concert.jpg');
+}
+
+.bar-dark h2.score, .bar-dark h2.score:hover {
+  color: black;
+}
