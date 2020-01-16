@@ -26,3 +26,20 @@
 .bar-dark h2.score, .bar-dark h2.score:hover {
   color: black;
 }
+
+ion-content {
+  --ion-background-color: transparent;
+  background-image: url('/assets/images/choir.jpg');
+  background-size: cover !important;
+  background-position: center;
+}
+
+ion-slides {
+  height: 100vw;
+}
+
+
+ion-card {
+  text-align: left;
+  --background: #ffffff !important;
+}
