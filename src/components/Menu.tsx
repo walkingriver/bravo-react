@@ -13,6 +13,7 @@ import {
 import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { homeOutline, listOutline, listSharp, homeSharp } from 'ionicons/icons';
+import './Menu.css';
 
 interface MenuProps extends RouteComponentProps {
   selectedPage: string;
@@ -52,14 +53,14 @@ const Menu: React.FunctionComponent<MenuProps> = ({ selectedPage }) => (
         {appPages.map((appPage, index) => {
           return (
             <IonMenuToggle key={index} autoHide={false}>
-              <IonItem className={selectedPage === appPage.title ? 'selected' : ''}
-                lines="none"
-                routerLink={appPage.url}
-                routerDirection="none">
-                <IonIcon slot="start" icon={appPage.iosIcon}
-                />
-                <IonLabel>{appPage.title}</IonLabel>
-              </IonItem>
+<IonItem className={selectedPage === appPage.title ? 'selected' : ''}
+  lines="none"
+  routerLink={appPage.url}
+  routerDirection="none">
+  <IonIcon slot="start" icon={appPage.iosIcon}
+  />
+  <IonLabel>{appPage.title}</IonLabel>
+</IonItem>
             </IonMenuToggle>
           );
         })}

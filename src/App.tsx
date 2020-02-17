@@ -36,8 +36,8 @@ const App: React.FC = () => {
         <IonSplitPane contentId="main">
           <Menu selectedPage={selectedPage} />
           <IonRouterOutlet id="main">
-            <Route path="/home" render={() => { setSelectedPage('home'); return <Home />; }} exact={true} />
-            <Route path="/list" render={() => { setSelectedPage('list'); return <List />; }} exact={true} />
+            <Route path="/home" render={() => { setSelectedPage('Home'); return <Home />; }} exact={true} />
+            <Route path="/list" render={() => { setSelectedPage('List'); return <List />; }} exact={true} />
             <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
           </IonRouterOutlet>
         </IonSplitPane>
