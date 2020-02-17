@@ -190,7 +190,7 @@ const HomePage: React.FC = () => {
                   <IonButtons slot="end">
                     <IonButton routerDirection="root" routerLink="/game">
                       Continue
-        <IonIcon name="arrow-forward"></IonIcon>
+        <IonIcon icon="arrow-forward"></IonIcon>
                     </IonButton>
                   </IonButtons>
                 </IonToolbar>

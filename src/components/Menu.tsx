@@ -12,13 +12,36 @@ import {
 } from '@ionic/react';
 import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
-import { AppPage } from '../declarations';
+import { homeOutline, listOutline, listSharp, homeSharp } from 'ionicons/icons';
+import './Menu.css';
 
 interface MenuProps extends RouteComponentProps {
-  appPages: AppPage[];
+  selectedPage: string;
 }
 
-const Menu: React.FunctionComponent<MenuProps> = ({ appPages }) => (
+interface AppPage {
+  url: string;
+  iosIcon: string;
+  mdIcon: string;
+  title: string;
+}
+
+const appPages: AppPage[] = [
+  {
+    title: 'Home',
+    url: '/home',
+    iosIcon: homeOutline,
+    mdIcon: homeSharp
+  },
+  {
+    title: 'List',
+    url: '/list',
+    iosIcon: listOutline,
+    mdIcon: listSharp
+  }
+];
+
+const Menu: React.FunctionComponent<MenuProps> = ({ selectedPage }) => (
   <IonMenu contentId="main" type="overlay">
     <IonHeader>
       <IonToolbar>
@@ -30,10 +53,14 @@ const Menu: React.FunctionComponent<MenuProps> = ({ appPages }) => (
         {appPages.map((appPage, index) => {
           return (
             <IonMenuToggle key={index} autoHide={false}>
-              <IonItem routerLink={appPage.url} routerDirection="none">
-                <IonIcon slot="start" icon={appPage.icon} />
-                <IonLabel>{appPage.title}</IonLabel>
-              </IonItem>
+<IonItem className={selectedPage === appPage.title ? 'selected' : ''}
+  lines="none"
+  routerLink={appPage.url}
+  routerDirection="none">
+  <IonIcon slot="start" icon={appPage.iosIcon}
+  />
+  <IonLabel>{appPage.title}</IonLabel>
+</IonItem>
             </IonMenuToggle>
           );
         })}
